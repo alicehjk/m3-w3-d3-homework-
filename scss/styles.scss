@@ -1,10 +1,33 @@
-/* Variables */
 
+@import 'colors';
 
-/* Nest Main */
-main {
-    width: 1350px;
-    min-height:535px;
+@mixin button-style {
+    background-color: $blue;
+    color: $white;
+    font-family: $font-primary;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-// Mixin or Extend for button
+// Nest Main
+main {
+    width: 1350px;
+    min-height: 535px;
+
+    .hero {
+        background-color: $light-gray;
+        padding: 2rem;
+    }
+
+    .hero h1 {
+        font-family: $font-secondary;
+        color: $dark-gray;
+    }
+
+    .hero button {
+        @include button-style;
+    }
+}

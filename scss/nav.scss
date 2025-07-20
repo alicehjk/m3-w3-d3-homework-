@@ -1,1 +1,26 @@
-/* Nest Nav */
+
+@import 'colors';
+
+nav {
+    background-color: $gold;
+    padding: 1rem;
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        padding: 0;
+
+        li {
+            a {
+                text-decoration: none;
+                color: $white;
+                font-weight: bold;
+
+                &:hover {
+                    color: $light-green;
+                }
+            }
+        }
+    }
+}
